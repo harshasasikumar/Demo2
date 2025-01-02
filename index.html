@@ -5,65 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify Login</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .container {
-      max-width: 400px;
-      margin: 50px auto;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-    .label {
-      display: block;
-      margin: 10px 0 5px;
-    }
-    .input-field {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .password-wrapper {
-      position: relative;
-    }
-    .password-toggle {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-    .icon {
-      width: 20px;
-      height: 20px;
-    }
-    .login-btn {
-      background-color: #1db954;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .login-btn:hover {
-      background-color: #1ed760;
-    }
-    .forgot-link, .signup-link {
-      color: #1db954;
-      text-decoration: none;
-    }
-    .forgot-link:hover, .signup-link:hover {
-      text-decoration: underline;
-    }
-    .welcome-message {
-      display: none;
-      font-size: 18px;
-      color: #333;
-      margin-top: 20px;
-    }
-  </style>
+  
 </head>
 <body>
   <div class="container">
@@ -88,21 +30,5 @@
     </form>
     <p id="welcome-message" class="welcome-message">Welcome to Spotify!</p>
   </div>
-
-  <script>
-    const form = document.getElementById('login-form');
-    const welcomeMessage = document.getElementById('welcome-message');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from actually submitting
-      welcomeMessage.style.display = 'block';
-    });
-
-    function togglePasswordVisibility() {
-      const passwordField = document.getElementById('password');
-      const type = passwordField.type === 'password' ? 'text' : 'password';
-      passwordField.type = type;
-    }
-  </script>
 </body>
 </html>
