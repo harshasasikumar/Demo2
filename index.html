@@ -4,11 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify Login</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://source.unsplash.com/random/1920x1080?music') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      width: 350px;
+    }
+    .container img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+    .label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .password-wrapper {
+      position: relative;
+    }
+    .password-toggle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #1db954;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+    .forgot-link {
+      display: block;
+      margin-top: 10px;
+      color: #1db954;
+      text-decoration: none;
+    }
+    .signup-text {
+      margin-top: 15px;
+    }
+    .signup-link {
+      color: #1db954;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify Logo">
     <form id="login-form">
       <label for="email" class="label">Email or username</label>
       <input type="text" id="email" name="email" placeholder="Email or username" class="input-field" required>
@@ -28,7 +102,14 @@
         Don't have an account? <a href="#" class="signup-link">Sign up for Spotify</a>
       </p>
     </form>
-    <p id="welcome-message" class="welcome-message">Welcome to Spotify!</p>
   </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById('password');
+      const type = passwordField.type === 'password' ? 'text' : 'password';
+      passwordField.type = type;
+    }
+  </script>
 </body>
 </html>
